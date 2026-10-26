@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buba Servise LLC — Tile, Laminate, Painting & Remodeling in Las Vegas</title>
+<meta name="description" content="Buba Servise LLC — Las Vegas construction & remodeling: tile, laminate flooring, baseboards, full remodels, house flipping, interior & exterior painting. 18 years in construction. Free estimates.">
+<style>
+  :root{
+    --ink:#16181d; --ink2:#1f232b; --paper:#ffffff; --mut:#5b6472;
+    --acc:#f59e0b; --acc2:#d97706; --line:#e7e9ee; --soft:#f6f7f9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(22,24,29,.96);color:#fff;border-bottom:3px solid var(--acc)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-weight:800;font-size:21px;letter-spacing:.4px}
+  .logo b{color:var(--acc)}
+  .logo span{display:block;font-size:11px;font-weight:600;letter-spacing:2.2px;color:#c9ced8}
+  .links{display:flex;gap:26px;font-size:15px;font-weight:600}
+  .links a{color:#e8eaf0}
+  .links a:hover{color:var(--acc)}
+  .btn{display:inline-block;background:var(--acc);color:#16181d;font-weight:700;padding:12px 22px;border-radius:8px;border:0;cursor:pointer;font-size:15px}
+  .btn:hover{background:var(--acc2);color:#fff}
+  .btn.dark{background:var(--ink);color:#fff}
+  .btn.dark:hover{background:var(--ink2)}
+  @media(max-width:760px){.links{display:none}}
+  /* hero */
+  .hero{position:relative;color:#fff}
+  .hero img.bg{width:100%;height:560px;object-fit:cover}
+  .hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,14,.82) 0%,rgba(10,11,14,.45) 55%,rgba(10,11,14,.12) 100%)}
+  .hero .inner{position:absolute;inset:0;display:flex;align-items:center}
+  .hero h1{font-size:46px;line-height:1.12;font-weight:800;max-width:640px}
+  .hero h1 em{font-style:normal;color:var(--acc)}
+  .hero p{margin:18px 0 26px;font-size:19px;max-width:520px;color:#eef0f4}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .badge{display:inline-block;background:var(--acc);color:#16181d;font-weight:800;padding:7px 14px;border-radius:999px;font-size:14px;margin-bottom:18px;letter-spacing:.3px}
+  @media(max-width:760px){.hero img.bg{height:480px}.hero h1{font-size:33px}.hero p{font-size:16px}}
+  /* trust strip */
+  .strip{background:var(--ink);color:#fff}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:22px 20px;text-align:center}
+  .strip b{display:block;font-size:24px;color:var(--acc)}
+  .strip span{font-size:13.5px;color:#c9ced8;letter-spacing:.4px}
+  @media(max-width:760px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+  /* sections */
+  section{padding:64px 0}
+  h2{font-size:32px;font-weight:800;margin-bottom:8px}
+  .sub{color:var(--mut);font-size:17px;margin-bottom:34px;max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 14px 34px rgba(16,18,22,.12);transform:translateY(-3px)}
+  .card img{height:190px;width:100%;object-fit:cover}
+  .card .body{padding:18px 20px 22px}
+  .card h3{font-size:19px;margin-bottom:6px}
+  .card p{color:var(--mut);font-size:15px}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gal img{height:210px;width:100%;object-fit:cover;border-radius:12px}
+  @media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}}
+  /* about */
+  .about{background:var(--soft)}
+  .about .row{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:center}
+  .about img{border-radius:14px;height:360px;width:100%;object-fit:cover}
+  @media(max-width:860px){.about .row{grid-template-columns:1fr}}
+  .ticks{list-style:none;margin-top:16px}
+  .ticks li{padding:7px 0 7px 30px;position:relative;font-size:16px}
+  .ticks li:before{content:"✔";position:absolute;left:0;color:var(--acc2);font-weight:800}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:800px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--ink);color:#fff;border-radius:14px;padding:26px}
+  .step b{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--acc);color:#16181d;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+  .step h3{margin-bottom:6px;font-size:18px}
+  .step p{color:#c9ced8;font-size:15px}
+  /* contact */
+  .contact{background:var(--ink);color:#fff}
+  .contact .row{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media(max-width:860px){.contact .row{grid-template-columns:1fr}}
+  .contact h2{color:#fff}
+  .contact .sub{color:#c9ced8}
+  form{display:grid;gap:12px}
+  input,select,textarea{width:100%;padding:13px 14px;border-radius:8px;border:1px solid #3a3f4a;background:#22262f;color:#fff;font-size:15.5px;font-family:inherit}
+  textarea{min-height:104px;resize:vertical}
+  input::placeholder,textarea::placeholder{color:#8b93a3}
+  .ok{display:none;background:#14532d;border:1px solid #22c55e;color:#dcfce7;padding:13px 16px;border-radius:8px;font-size:15px}
+  .cinfo p{margin:10px 0;font-size:16.5px;color:#e8eaf0}
+  .cinfo b{color:var(--acc)}
+  footer{background:#0e0f12;color:#9aa1af;padding:26px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">BUBA <b>SERVISE</b> LLC<span>CONSTRUCTION &amp; REMODELING</span></a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Free Estimate</a>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="bg" src="kitchen.jpg" alt="Remodeled kitchen in Las Vegas">
+  <div class="shade"></div>
+  <div class="inner">
+    <div class="wrap">
+      <span class="badge">FREE ESTIMATES — LAS VEGAS, NV</span>
+      <h1>Tile, Flooring, Painting &amp; <em>Full Remodels</em> Done Right</h1>
+      <p>From a single bathroom to a full house flip — 18 years in construction, clean work, honest pricing.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Get a Free Estimate</a>
+        <a class="btn dark" href="#work">See Our Work</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>18 Years</b><span>IN CONSTRUCTION</span></div>
+    <div><b>Free</b><span>ON-SITE ESTIMATES</span></div>
+    <div><b>Full Service</b><span>TILE • FLOORS • PAINT</span></div>
+    <div><b>Las Vegas</b><span>&amp; SURROUNDING AREAS</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What We Do</h2>
+    <p class="sub">One crew for the whole job — no juggling five different contractors. Homeowners, landlords and investors across the Las Vegas valley.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="tile.jpg" alt="Tile installation">
+        <div class="body"><h3>Tile Installation</h3>
+        <p>Floors, showers, backsplashes and patios. Porcelain, ceramic and stone — level, tight grout lines, waterproofed wet areas.</p></div>
+      </div>
+      <div class="card">
+        <img src="laminate.jpg" alt="Laminate flooring">
+        <div class="body"><h3>Laminate &amp; Flooring</h3>
+        <p>Laminate and vinyl plank installed fast and flat — with proper underlayment, transitions and a clean finish edge to edge.</p></div>
+      </div>
+      <div class="card">
+        <img src="baseboard.jpg" alt="Baseboard installation">
+        <div class="body"><h3>Baseboards &amp; Trim</h3>
+        <p>New baseboards, door casing and trim — cut, caulked and painted for that crisp finished look after new floors.</p></div>
+      </div>
+      <div class="card">
+        <img src="bathroom.jpg" alt="Bathroom remodel">
+        <div class="body"><h3>Remodeling &amp; Rebuilding</h3>
+        <p>Kitchens, bathrooms and full interiors. Demo to final touch-ups — rebuilding worn spaces into modern, livable ones.</p></div>
+      </div>
+      <div class="card">
+        <img src="remodel.jpg" alt="House flipping renovation">
+        <div class="body"><h3>House Flipping</h3>
+        <p>Investor rehabs done on schedule: floors, tile, paint, kitchens and baths — the work that sells a flip, done in one pass.</p></div>
+      </div>
+      <div class="card">
+        <img src="exterior.jpg" alt="Exterior house painting">
+        <div class="body"><h3>Painting — Interior &amp; Exterior</h3>
+        <p>Full prep, quality paint, clean lines. Whole-house exteriors, interiors, cabinets and accent walls that hold up in the Vegas sun.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <h2>Our Work</h2>
+    <p class="sub">Recent projects around Las Vegas — tile, floors, paint and full renovations.</p>
+    <div class="gal">
+      <img src="kitchen.jpg" alt="Kitchen remodel">
+      <img src="bathroom.jpg" alt="Bathroom tile remodel">
+      <img src="interior_paint.jpg" alt="Interior painting">
+      <img src="laminate.jpg" alt="Laminate flooring">
+      <img src="tile.jpg" alt="Tile work">
+      <img src="exterior.jpg" alt="Exterior painting">
+      <img src="remodel.jpg" alt="Full renovation">
+      <img src="baseboard.jpg" alt="Baseboards and trim">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="row">
+      <img src="remodel.jpg" alt="Renovation in progress">
+      <div>
+        <h2>18 Years in Construction</h2>
+        <p class="sub" style="margin-bottom:6px">Buba Servise LLC is a Las Vegas construction company built on one simple rule: do it like it's your own house. We handle tile, flooring, trim, painting and complete remodels ourselves — no day-labor roulette, no disappearing acts.</p>
+        <ul class="ticks">
+          <li>Free on-site estimates with a written quote</li>
+          <li>Homeowners, landlords &amp; real-estate investors</li>
+          <li>Clean job sites, work finished on schedule</li>
+          <li>Nevada State Business License #NV20253281783</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <p class="sub">Three steps from first call to finished job.</p>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Request a Free Estimate</h3><p>Send the form below or reach out — tell us what you're planning, big or small.</p></div>
+      <div class="step"><b>2</b><h3>On-Site Visit &amp; Written Quote</h3><p>We come out, measure, talk materials and give you a clear written price. No obligation.</p></div>
+      <div class="step"><b>3</b><h3>Work Done Clean &amp; On Time</h3><p>Our crew completes the job, walks it with you, and doesn't leave until it's right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="row">
+      <div class="cinfo">
+        <h2>Get Your Free Estimate</h2>
+        <p class="sub">Tell us about your project — tile, floors, paint, a full remodel or a flip. We'll get back to you with next steps and a free on-site estimate.</p>
+        <p><b>Company:</b> Buba Servise LLC</p>
+        <p><b>Based in:</b> Las Vegas, NV — serving the whole valley</p>
+        <p><b>Services:</b> Tile • Laminate • Baseboards • Remodeling • Flipping • Painting</p>
+        <p><b>Estimates:</b> Always free</p>
+      </div>
+      <form id="estForm">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <select name="service">
+          <option>Tile installation</option>
+          <option>Laminate / flooring</option>
+          <option>Baseboards &amp; trim</option>
+          <option>Remodeling / rebuilding</option>
+          <option>House flipping / investor rehab</option>
+          <option>Painting — interior</option>
+          <option>Painting — exterior</option>
+          <option>Other project</option>
+        </select>
+        <textarea name="msg" placeholder="Tell us about the project — rooms, size, timing…"></textarea>
+        <button class="btn" type="submit">Request Free Estimate</button>
+        <div class="ok" id="okMsg">Thank you! Your request has been received — we'll contact you shortly to schedule your free estimate.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Buba Servise LLC — Las Vegas, NV</div>
+    <div>Nevada State Business License #NV20253281783</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('estForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('okMsg').style.display='block';
+  this.querySelector('button').textContent='Request Sent ✓';
+});
+</script>
+</body>
+</html>
